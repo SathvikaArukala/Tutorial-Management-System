@@ -1,0 +1,48 @@
+<h1 class="text-center">{{title}}</h1>
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark ">
+  <div class="container justify-content-between">
+    <h1 class="">  </h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav"></div>
+    <ul class="navbar-nav">
+      <div class="nav-item" ></div>
+      <li class = "nav-item">
+        <a routerLink="tutorials" routerLinkActive="active" class="nav-link" >Tutorial List</a>
+      </li>
+      <li class = "nav-item">
+      <a routerLink="add-tutorial" routerLinkActive="active" class="nav-link" >Add Tutorial</a>
+      </li>
+    
+      <li class = "nav-item align-items-center">
+      <a routerLink="sign-up" routerLinkActive="active" class="nav-link" >SignUp</a>
+      </li>
+      <li class = "nav-item align-items-center">
+      <a routerLink="sign-in" routerLinkActive="active" class="nav-link" >SignIn</a>
+      </li>
+           <li class="nav-item">
+        <form class="form-horizontal" *ngIf="userService.isUserLoggedIn()">
+         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-2" type="submit"> Search </button>-->
+        </form>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<div class = "container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <span> All righ reserved 2023 &#64;TutorialManagementSystem</span>
+  </div>
+</footer>
+
+

@@ -1,0 +1,27 @@
+
+<h2> Tutorial List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Tutorial Id </th>
+            <th> Tutorial Name </th>
+            <th> Tutorial EmailId </th>
+            
+            <th> Tutorial Active </th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let tutorial of tutorials , paginate: { itemsPerPage: count, currentPage: p }" >
+            <td> {{ tutorial.id }} </td>
+            <td> {{ tutorial.name }} </td>
+            <td> {{ tutorial.email }} </td>
+            
+            <td> {{ tutorial.active }} </td>
+            <td>
+                <button (click) = "updateTutorial(tutorial.id)" class = "btn btn-secondary"> Update</button>
+                <button (click) = "deleteTutorial(tutorial.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "tutorialDetails(tutorial.id)" class = "btn btn-info" style="margin-left: 10px"> Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
